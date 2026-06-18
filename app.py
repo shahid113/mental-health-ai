@@ -1,5 +1,4 @@
 import os
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 import json
 import uuid
 import logging
@@ -9,9 +8,9 @@ from typing import Annotated, TypedDict
 # LangChain & LangGraph Imports
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.vectorstores import InMemoryVectorStore  # <-- Replaced Chroma
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
 from langgraph.graph.message import add_messages
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
@@ -25,7 +24,7 @@ from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 from transformers import pipeline
 
 # ==========================================
-# UI Setup & Configuration
+# UI Setup & Secure Token Configuration
 # ==========================================
 st.set_page_config(page_title="Mental Health AI Companion", page_icon="💙", layout="centered")
 
@@ -35,15 +34,26 @@ st.warning(
     "If you are in crisis, please contact a professional immediately (e.g., dial 988 in the US, or 112 in India)."
 )
 
-# Sidebar for API Key
+# 1. Fetch token automatically from Streamlit Secrets or Environment Variables
+hf_token = st.secrets.get("HUGGINGFACEHUB_API_TOKEN") or os.environ.get("HUGGINGFACEHUB_API_TOKEN")
+
+# 2. Fallback to Sidebar input if not found automatically
 with st.sidebar:
     st.header("⚙️ Configuration")
-    hf_token = st.text_input("Hugging Face API Token", type="password", help="Get this from your Hugging Face settings.")
-    if hf_token:
-        os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_token
+    
+    if not hf_token:
+        hf_token = st.text_input(
+            "Hugging Face API Token", 
+            type="password", 
+            help="Get this from your Hugging Face settings under Access Tokens."
+        )
+        if not hf_token:
+            st.info("🔑 Please enter your Hugging Face API Token to start.")
+            st.stop()
     else:
-        st.info("Please enter your Hugging Face API Token to start.")
-        st.stop()
+        st.success("🔒 API Token loaded securely!")
+
+    os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_token
     
     if st.button("Clear Conversation"):
         st.session_state.messages = []
@@ -81,7 +91,7 @@ def load_agent():
     )
     llm = ChatHuggingFace(llm=hf_endpoint)
 
-    # 2. Knowledge Base & Vector Store
+    # 2. Knowledge Base parsing
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     file_path = "mental_health_knowledge.json"
     if not os.path.exists(file_path):
@@ -110,11 +120,10 @@ def load_agent():
             chunk = f"Topic: {topic_name}\nSubtopic: {clean_subtopic}\nInformation: {content_str}"
             docs.append(chunk)
 
-    vectorstore = Chroma.from_texts(
+    # Use InMemoryVectorStore - completely avoids the C++ protobuf bugs
+    vectorstore = InMemoryVectorStore.from_texts(
         texts=docs,
-        embedding=embeddings,
-        collection_name="mental_health_kb",
-        persist_directory="./chroma_health_db"
+        embedding=embeddings
     )
 
     # 3. Reranking Retriever
@@ -251,19 +260,16 @@ for msg in st.session_state.messages:
 
 # User Input
 if prompt := st.chat_input("How are you feeling today?"):
-    # Append & display user message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # LangGraph Config (Binding the session to LangGraph Memory)
     config = {"configurable": {"thread_id": st.session_state.thread_id}}
     initial_state = {
         "user_input": prompt,
         "messages": [HumanMessage(content=prompt)]
     }
 
-    # Generate Response
     with st.chat_message("assistant"):
         with st.spinner("Reflecting..."):
             result = app.invoke(initial_state, config=config)
