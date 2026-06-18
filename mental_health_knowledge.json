@@ -1,0 +1,234 @@
+{
+  "knowledge_base": [
+    {
+      "topic": "Anxiety",
+      "subtopics": {
+        "symptoms": [
+          "Persistent worry about various aspects of daily life",
+          "Physical symptoms: racing heart, sweating, trembling",
+          "Difficulty concentrating or sleeping",
+          "Feeling tense or on edge",
+          "Difficulty controlling worry",
+          "Panic attacks or sudden intense fear"
+        ],
+        "causes": [
+          "Chronic stress from work or relationships",
+          "Trauma or past negative experiences",
+          "Medical conditions or medication side effects",
+          "Caffeine overuse or sleep deprivation",
+          "Major life changes or uncertainty",
+          "Genetics and brain chemistry"
+        ],
+        "coping_techniques": [
+          "Deep breathing exercises: Try 4-7-8 breathing or box breathing",
+          "Grounding techniques: 5-4-3-2-1 sensory exercise to bring focus to present",
+          "Progressive muscle relaxation: Tense and release muscle groups",
+          "Cognitive behavioral therapy (CBT): Challenge and reframe anxious thoughts",
+          "Physical activity: Exercise releases endorphins and reduces stress",
+          "Mindfulness meditation: Practice present-moment awareness",
+          "Limit caffeine and alcohol: These can trigger or worsen anxiety",
+          "Maintain regular sleep schedule: Sleep deprivation amplifies anxiety",
+          "Social support: Talk with trusted friends or family",
+          "Professional help: Therapy or medication when anxiety becomes overwhelming"
+        ],
+        "when_to_seek_help": "If anxiety persists for more than 2 weeks, interferes with daily life, or causes physical symptoms"
+      }
+    },
+    {
+      "topic": "Depression",
+      "subtopics": {
+        "symptoms": [
+          "Persistent sad or empty mood lasting weeks or months",
+          "Loss of interest in activities you once enjoyed",
+          "Changes in appetite or weight",
+          "Sleep disturbances: insomnia or oversleeping",
+          "Fatigue or lack of energy",
+          "Feelings of worthlessness or guilt",
+          "Difficulty concentrating or making decisions",
+          "Thoughts of death or suicide",
+          "Physical aches without clear cause"
+        ],
+        "causes": [
+          "Chemical imbalances in the brain",
+          "Trauma or significant loss",
+          "Chronic illness or pain",
+          "Social isolation or loneliness",
+          "Major life transitions",
+          "Substance abuse",
+          "Genetics and family history"
+        ],
+        "self_care_strategies": [
+          "Establish a routine: Structure helps create stability and purpose",
+          "Move your body: Even 10-15 min walks can boost mood",
+          "Exposure to sunlight: Vitamin D and natural light help regulate mood",
+          "Maintain basic hygiene: Shower, change clothes, basic self-care",
+          "Reach out to others: Combat isolation by connecting with friends",
+          "Engage in enjoyable activities: Even small things like favorite music",
+          "Avoid alcohol and drugs: These worsen depression",
+          "Practice self-compassion: Treat yourself as you'd treat a friend",
+          "Keep a journal: Reflect on feelings and patterns",
+          "Seek professional support: Therapy and medication are effective"
+        ],
+        "when_to_seek_help": "If you experience persistent sadness for more than 2 weeks, thoughts of suicide, or inability to function"
+      }
+    },
+    {
+      "topic": "Stress Management",
+      "subtopics": {
+        "work_life_balance": [
+          "Set clear boundaries: Don't check work emails after hours",
+          "Schedule breaks during the day: Even 5 minutes helps reset",
+          "Take vacations and use time off: Rest is essential for mental health",
+          "Delegate tasks: You don't have to do everything yourself",
+          "Say no to non-essential commitments: Protect your time and energy",
+          "Create a separate workspace if working from home",
+          "Establish transitions: Separate work time from personal time",
+          "Pursue hobbies and interests outside work"
+        ],
+        "mindfulness": [
+          "Daily meditation: Start with just 5-10 minutes",
+          "Mindful breathing: Focus on each inhale and exhale",
+          "Body scan meditation: Notice sensations without judgment",
+          "Mindful eating: Eat slowly and notice flavors and textures",
+          "Walking meditation: Pay attention to each step",
+          "Mindful listening: Fully engage when others speak",
+          "Present-moment awareness: Notice what's happening right now"
+        ],
+        "time_management": [
+          "Identify your priorities: Focus on what truly matters",
+          "Break large tasks into smaller steps: Reduces overwhelm",
+          "Use time-blocking: Dedicate blocks for specific activities",
+          "Minimize distractions: Create a focused work environment",
+          "Take regular breaks: Rest improves productivity and mental health",
+          "Learn to say no: Protect your time from endless demands",
+          "Track time usage: Understand where your time actually goes"
+        ]
+      }
+    },
+    {
+      "topic": "Self-Esteem & Social Media",
+      "subtopics": {
+        "digital_wellness": [
+          "Curate your feed: Follow positive, inspiring, and authentic accounts",
+          "Set time limits: Use app timers to limit social media use",
+          "Remove notifications: Reduce constant alerts and distractions",
+          "No phones before bed: Protect sleep quality",
+          "Compare less: Remember that curated posts aren't reality",
+          "Unfollow accounts that make you feel bad: Your mental health matters",
+          "Take digital detox days: Regular breaks from screens"
+        ],
+        "comparison_culture": [
+          "Understand the curated nature: People show highlight reels, not real life",
+          "Remember filters and editing: Photos are heavily manipulated",
+          "Focus on your own journey: Progress is personal and non-linear",
+          "Practice gratitude: Appreciate what you have instead of comparing",
+          "Limit comparison triggers: Mute or unfollow unhelpful accounts",
+          "Reality check: Ask 'Is this realistic?' when viewing content",
+          "Celebrate others' wins: Reduce envy by practicing generosity"
+        ],
+        "healthy_boundaries": [
+          "Know your limits: When to step back from social media",
+          "Be authentic: Share your real self, not a perfect version",
+          "Mute conflict: You don't need to engage in every argument",
+          "Protect your privacy: Share only what you're comfortable with",
+          "Manage notifications: Turn off alerts from draining interactions",
+          "Set usage rules: When and where you use social media",
+          "Connect offline: Prioritize real-world relationships"
+        ]
+      }
+    },
+    {
+      "topic": "Imposter Syndrome",
+      "subtopics": {
+        "recognition": [
+          "Persistent self-doubt despite evidence of competence",
+          "Attributing success to luck or timing, not your abilities",
+          "Fear of being 'found out' as a fraud",
+          "Over-preparing or working longer hours to mask insecurity",
+          "Difficulty accepting compliments or praise",
+          "Comparing yourself to others and feeling inferior",
+          "Perfectionism and fear of making mistakes"
+        ],
+        "reframing_techniques": [
+          "Document your achievements: Keep a 'success file' of accomplishments",
+          "Accept compliments gracefully: Say 'thank you' instead of deflecting",
+          "Challenge the 'fraud' thought: Ask for evidence it's actually true",
+          "Recognize learning requires time: Everyone was a beginner once",
+          "Share your struggles: Others feel the same way",
+          "Focus on effort and growth: Not just innate talent",
+          "Remember failures are data: They teach you what to do differently",
+          "Celebrate small wins: Progress is progress, no matter how small"
+        ],
+        "coping_strategies": [
+          "Seek mentorship: Learn from others who've overcome similar feelings",
+          "Join communities: Connect with people in your field",
+          "Take on challenges: Small wins build confidence",
+          "Practice self-compassion: You're allowed to be imperfect",
+          "Reframe anxiety as excitement: Same physical sensation, different meaning",
+          "Focus on helping others: Builds confidence and provides perspective"
+        ]
+      }
+    },
+    {
+      "topic": "Loneliness & Isolation",
+      "subtopics": {
+        "connection_strategies": [
+          "Reach out first: Send a message, make a call, invite someone",
+          "Join groups or clubs: Find people with shared interests",
+          "Volunteer: Help others while building meaningful connections",
+          "Attend social events: Even if you feel anxious, start small",
+          "Use technology: Video calls, online communities, social media",
+          "Be vulnerable: Share genuine feelings to deepen connections",
+          "Practice active listening: Make others feel heard and valued",
+          "Schedule regular meetups: Consistency strengthens friendships"
+        ],
+        "community_building": [
+          "Find your tribe: Look for people who share your values",
+          "Online communities: Reddit, Discord, forums for any interest",
+          "Classes or workshops: Learn something while connecting",
+          "Support groups: Specialized groups for specific challenges",
+          "Faith communities: If spiritual, churches and spiritual centers",
+          "Work relationships: Develop friendships beyond just work tasks",
+          "Neighborhood activities: Community events, block parties, etc."
+        ],
+        "self_connection": [
+          "Develop a relationship with yourself: Self-compassion and self-care",
+          "Hobbies and interests: Creative and fulfilling activities",
+          "Journaling: Explore your thoughts and feelings",
+          "Meditation and mindfulness: Connect with your inner self",
+          "Physical activity: Movement is a form of self-connection",
+          "Therapy: A therapeutic relationship can be deeply connecting"
+        ]
+      }
+    },
+    {
+      "topic": "Crisis Resources",
+      "subtopics": {
+        "emergency_hotlines": [
+          "National Suicide Prevention Lifeline: 988 (US) - Available 24/7",
+          "Crisis Text Line: Text HOME to 741741",
+          "International Association for Suicide Prevention: https://www.iasp.info/resources/Crisis_Centres/",
+          "SAMHSA National Helpline: 1-800-662-HELP (4357) - Substance abuse and mental health",
+          "Immigration-specific support: Available through community organizations"
+        ],
+        "support_organizations": [
+          "National Alliance on Mental Illness (NAMI): www.nami.org",
+          "Mental Health America: www.mhanational.org",
+          "The Trevor Project (LGBTQ+ support): 1-866-488-7386",
+          "Crisis Text Line: www.crisistextline.org",
+          "International Association for Suicide Prevention: https://www.iasp.info/",
+          "Local emergency services: 911 (US) for immediate danger"
+        ],
+        "immediate_actions": [
+          "Contact emergency services (911) if in immediate danger",
+          "Call or text a crisis helpline: They are trained to help",
+          "Tell someone you trust: A friend, family member, or professional",
+          "Go to the nearest emergency room if needed",
+          "Remove means of self-harm if possible",
+          "Create a safety plan with the help of a mental health professional",
+          "Schedule an appointment with a mental health provider urgently"
+        ]
+      }
+    }
+  ]
+}
