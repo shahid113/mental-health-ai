@@ -1,0 +1,11 @@
+streamlit
+langchain
+langgraph
+langchain-chroma
+langchain-huggingface
+langchain-classic
+chromadb
+sentence-transformers
+transformers
+huggingface_hub
+langchain-community
